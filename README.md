@@ -26,3 +26,7 @@ npm install chart.js
 ```js
 npm i react-chartjs-2
 ```
+
+## Part 3
+
+profile page created done
