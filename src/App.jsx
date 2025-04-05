@@ -6,7 +6,7 @@ import MainBoard from "./components/Dashboard/Mainboard";
 import Order from "./components/Order";
 import Products from "./components/Products";
 import Profile from "./components/Profile";
-import SalesReport from "./components/SalesReport/SalesReport";
+import SalesReport from "./components/SalesReport";
 import Sidebar from "./components/Sidebar";
 
 const App = () => {

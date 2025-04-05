@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav className=" shadow-md py-4">
-      <div>Navbar</div>
+      <div className="text-white text-center">Navbar</div>
     </nav>
   );
 };
