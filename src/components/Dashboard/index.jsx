@@ -1,7 +1,13 @@
+import Earnings from "./Earnings";
+import TodaySales from "./TodaySales";
+import TopProducts from "./TopProducts";
+
 const Dashboard = () => {
   return (
-    <div className="min-h-screen  flex items-center justify-center">
-      <h1 className="text-[100px] uppercase text-white"> Dashboard</h1>
+    <div className="mt-5">
+      <TodaySales />
+      <TopProducts />
+      <Earnings />
     </div>
   );
 };
