@@ -1,14 +1,15 @@
-import React from "react";
-import Earnings from "./Earnings";
-import TodaySales from "./TodaySales";
-import TopProducts from "./TopProducts";
+import { Outlet } from "react-router";
+import Navbar from "../Navbar";
 
-const MainBoard = () => {
+const MainBoard = ({ toggleSidebar }) => {
   return (
-    <div className="mt-5">
-      <TodaySales />
-      <TopProducts />
-      <Earnings />
+    <div
+      className={`flex-1 hide-scrollbar transition-all max-h-screen overflow-y-scroll`}
+    >
+      <Navbar toggleSidebar={toggleSidebar} />
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 };
