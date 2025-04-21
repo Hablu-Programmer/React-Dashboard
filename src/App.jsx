@@ -1,13 +1,13 @@
 import { useState } from "react";
 
 import { Route, Routes } from "react-router";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard";
 import MainBoard from "./components/Dashboard/Mainboard";
-import Order from "./components/Order/Order";
-import Products from "./components/Products/Products";
-import Profile from "./components/Profile/Profile";
-import SalesReport from "./components/SalesReport/SalesReport";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Order from "./components/Order";
+import Products from "./components/Products";
+import Profile from "./components/Profile";
+import SalesReport from "./components/SalesReport";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,15 +24,9 @@ const App = () => {
           <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
         </div>
         <Routes>
-          <Route
-            path="/"
-            element={<Dashboard />}
-            toggleSidebar={toggleSidebar}
-          />
-          <Route path="/" element={<Dashboard toggleSidebar={toggleSidebar} />}>
-            <Route path="/" index element={<MainBoard />} />
+          <Route path="/" element={<MainBoard toggleSidebar={toggleSidebar} />}>
+            <Route path="/" index element={<Dashboard />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="order" element={<Order />} />
             <Route path="order" element={<Order />} />
             <Route path="product" element={<Products />} />
             <Route path="sales" element={<SalesReport />} />
