@@ -15,7 +15,7 @@ const demoProducts = Array.from({ length: 30 }, (_, index) => ({
 
 const Products = () => {
   return (
-    <div className="text-gray-200 w-full">
+    <div className="text-gray-200 w-full overflow-hidden">
       <div className="flex justify-between items-center gap-x-2 pt-6 pb-2 px-2">
         <h1 className="text-2xl font-bold ">Product List</h1>
         <button className="flex gap-2 items-center border border-grayText/30 px-2 py-1 rounded-md cursor-pointer hover:bg-gray-700 active:scale-90">
@@ -23,7 +23,9 @@ const Products = () => {
           <p>Add Product</p>
         </button>
       </div>
-      <ProductCard products={demoProducts} />
+      <div className="w-full overflow-x-auto">
+        <ProductCard products={demoProducts} />
+      </div>
     </div>
   );
 };

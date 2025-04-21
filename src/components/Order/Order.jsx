@@ -63,7 +63,7 @@ const Order = () => {
           </button>
         </div>
       </div>
-      <div className="flex gap-2 justify-between my-4">
+      <div className="flex gap-2 justify-between my-4 px-2">
         <ButtonGroup />
         {/* Right Icons */}
         <div className="flex space-x-2">
@@ -84,7 +84,7 @@ const Order = () => {
           </Button>
         </div>
       </div>
-      <div>
+      <div className="w-full overflow-x-auto">
         <OrderList />
       </div>
     </section>

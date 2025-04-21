@@ -5,7 +5,7 @@ import User from "../../assets/user.png";
 
 const Navbar = ({ toggleSidebar }) => {
   return (
-    <nav className="bg-primary1 shadow-md py-4">
+    <nav className="bg-primary1 shadow-md py-4 px-2">
       <div className="flex justify-between gap-2 items-center px-2">
         <button onClick={toggleSidebar} className="md:hidden cursor-pointer">
           <FiMenu className="text-white/50 text-2xl" />

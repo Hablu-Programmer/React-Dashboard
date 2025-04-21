@@ -22,7 +22,7 @@ const OrderListHeader = () => {
 
 const OrderList = () => {
   return (
-    <section className="text-white bg-primary2/10 overflow-x-auto cursor-pointer hide-scrollbar w-[100p0x]">
+    <section className="text-white bg-primary2/10 overflow-x-auto cursor-pointer hide-scrollbar min-w-[1050px]">
       <div className="min-w-[700px]">
         <OrderListHeader />
       </div>
