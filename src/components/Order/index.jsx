@@ -1,7 +1,40 @@
 import React, { useState } from "react";
+import { FaEllipsisV, FaFilter, FaSearch } from "react-icons/fa";
 import Button from "../Button";
-import { FaSearch, FaFilter, FaEllipsisV } from "react-icons/fa";
 import OrderList from "./OrderList";
+
+const Order = () => (
+  <section className="overflow-hidden">
+    <div className="flex justify-between px-2 py-1 md:py-2 items-center text-white bg-primary2 rounded-md">
+      <h1 className="text-xl md:text-2xl font-bold text-grayText">Order</h1>
+      <div>
+        <button className="bg-[#341196]/10 border border-blue-700/40 text-blue-500 rounded-md cursor-pointer px-2 py-1.5 md:px-3 md:py-2">
+          Create Order
+        </button>
+      </div>
+    </div>
+    <div className="flex gap-2 justify-between my-4 px-2">
+      <ButtonGroup />
+      {/* Right Icons */}
+      <div className="flex space-x-2">
+        <Button className={`bg-gray-500/10 text-white/60 py-1 px-2 rounded-md`}>
+          <FaSearch className="w-4 h-4" />
+        </Button>
+        <Button className={`bg-gray-500/10 text-white/60 py-1 px-2 rounded-md`}>
+          <FaFilter className="w-4 h-4" />
+        </Button>
+        <Button className={`bg-gray-500/10 text-white/60 py-1 px-2 rounded-md`}>
+          <FaEllipsisV className="w-4 h-4" />
+        </Button>
+      </div>
+    </div>
+    <div className="w-full overflow-x-auto">
+      <OrderList />
+    </div>
+  </section>
+);
+
+export default Order;
 
 const ButtonGroup = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -51,44 +84,3 @@ const ButtonGroup = () => {
     </div>
   );
 };
-
-const Order = () => {
-  return (
-    <section className="overflow-hidden">
-      <div className="flex justify-between px-2 py-1 md:py-2 items-center text-white bg-primary2 rounded-md">
-        <h1 className="text-xl md:text-2xl font-bold text-grayText">Order</h1>
-        <div>
-          <button className="bg-[#341196]/10 border border-blue-700/40 text-blue-500 rounded-md cursor-pointer px-2 py-1.5 md:px-3 md:py-2">
-            Create Order
-          </button>
-        </div>
-      </div>
-      <div className="flex gap-2 justify-between my-4 px-2">
-        <ButtonGroup />
-        {/* Right Icons */}
-        <div className="flex space-x-2">
-          <Button
-            className={`bg-gray-500/10 text-white/60 py-1 px-2 rounded-md`}
-          >
-            <FaSearch className="w-4 h-4" />
-          </Button>
-          <Button
-            className={`bg-gray-500/10 text-white/60 py-1 px-2 rounded-md`}
-          >
-            <FaFilter className="w-4 h-4" />
-          </Button>
-          <Button
-            className={`bg-gray-500/10 text-white/60 py-1 px-2 rounded-md`}
-          >
-            <FaEllipsisV className="w-4 h-4" />
-          </Button>
-        </div>
-      </div>
-      <div className="w-full overflow-x-auto">
-        <OrderList />
-      </div>
-    </section>
-  );
-};
-
-export default Order;
