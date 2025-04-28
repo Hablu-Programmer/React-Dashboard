@@ -4,7 +4,7 @@
 3. don't forget to install react-icons to install this type on the terminal bellow code
 
 ```js
-npm i react-icons --save-dev
+bun i react-icons --save-dev
 ```
 
 ## Part 1
@@ -18,13 +18,13 @@ navbar of the dashboard has been created and has been copyed assets folder and i
 ###### install chart js type on the terminal
 
 ```js
-npm install chart.js
+bun install chart.js
 ```
 
 ###### install react-chartjs-2 type on the terminal
 
 ```js
-npm i react-chartjs-2
+bun i react-chartjs-2
 ```
 
 ## Part 3
